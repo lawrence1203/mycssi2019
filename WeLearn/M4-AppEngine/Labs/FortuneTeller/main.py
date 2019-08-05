@@ -35,7 +35,6 @@ import os
 import jinja2
 import random
 
-
 def get_fortune():
     fortune_list=['Tomorrow, you will meet a life-changing new friend.',
                   'Fame and Instagram followers are headed your way.',
@@ -60,9 +59,12 @@ class FortuneHandler(webapp2.RequestHandler):
         self.response.write(start_template.render())
 
     def post(self):
-        my_dict={}
+        random_fortune = get_fortune()
+        astro_sign = self.request.get('user_astrological_sign')
+        my_dict={'the_fortune':random_fortune, 'the_astro_sign':astro_sign}
         end_template=jinja_current_directory.get_template("templates/fortune_results.html")
         self.response.write(end_template.render(my_dict))
+
 
 class HelloHandler(webapp2.RequestHandler):
     def get(self):

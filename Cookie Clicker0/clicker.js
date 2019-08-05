@@ -23,8 +23,6 @@ function wood_digger() {
   }
 };
 
-setInterval(wood_digger(), 1000);
-
 mainbutton.addEventListener("click", function() {
   total = total + clicklvl;
   dirtTotal.innerHTML = total + " dirt";
