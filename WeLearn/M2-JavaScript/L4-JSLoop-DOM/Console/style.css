@@ -10,8 +10,8 @@ button {
 .danger { background: red; }
 
 #box {
-  width: 200px;
-  height: 100px;
+  width: 850px;
+  height: 476px;
   border: 2px solid black;
   transition: 500ms;
 }

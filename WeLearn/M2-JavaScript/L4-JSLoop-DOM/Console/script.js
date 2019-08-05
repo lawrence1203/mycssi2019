@@ -2,13 +2,10 @@ const myButton = document.querySelector('#mybutton');
 const myBox = document.querySelector('#box');
 myButton.addEventListener('click', (event) => {
   console.log('Like Button Clicked!');
-  myButton.innerHTML = 'Liked!';
-  myButton.style.backgroundColor = 'lightgreen';
+  myButton.innerHTML = 'get fucked!';
 });
 
-myButton.addEventListener('mousemove', (event) => {
-  let red = Math.round(Math.random()*255);
-  let green = Math.round(Math.random()*255);
-  let blue = Math.round(Math.random()*255);
-  myBox.style.backgroundColor = "rgb("+red+","+green+","+blue+")"
+myButton.addEventListener('click', (event) => {
+  myBox.style.innerHTML('sigma balls')
+  myBox.style.backgroundImage = "url(https://i0.wp.com/media.criticalhit.net//2019/07/sigma-origin-cropped-hed-1180285-1280x0.jpg?w=850&ssl=1)"
 });
